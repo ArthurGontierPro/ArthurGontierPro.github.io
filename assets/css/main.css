@@ -1,11 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+/*@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");*/
 @import url("fontawesome-all.min.css");
+/*@import url("font/MadokaMusical.ttf");*/
 
 /*
 	Astral by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+@font-face{
+	font-family: 'mm';
+	src: url(MadokaMusical.ttf) format('truetype');
+}
+@font-face{
+	font-family: 'mr';
+	src: url(runes.ttf) format('truetype');
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -50,6 +59,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 
 body {
 	-webkit-text-size-adjust: none;

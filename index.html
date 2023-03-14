@@ -20,8 +20,9 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<a href="#" class="icon solid fa-home"><span>Home</span></a>
+						<a href="#about" class="icon solid fa-scroll"><span>About me</span></a>
 						<a href="#work" class="icon solid fa-folder"><span>Work</span></a>
-						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+						<a href="#contact" class="icon solid fa-paper-plane"><span>Contact</span></a>
 						<!-- <a href="https://twitter.com/ajlkn" class="icon brands fa-twitter"><span>Twitter</span></a> -->
 					</nav>
 
@@ -36,31 +37,93 @@
 									<p>Subject: Symetric cryptography analysis with declarative languages</p>
 									<p>CAPSULE team, IRISA, Université de Rennes 1 </p>
 								</header>
-								<a href="#work" class="jumplink pic">
-									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+								<a href="#about" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>About me</span></span>
 									<img src="images/me.jpg" alt="" />
 								</a>
-							</article>
+								</article>
+<article id="about" class="panel">
+<header>
+<p>
+<h3>
+Hi there! I am Arthur Gontier. Since September 2020, I am a PhD student in symmetric cryptanalysis with declarative languages in the <a href="https://team.inria.fr/capsule/">CAPSULE team</a> in Rennes supervised by <a href="https://people.irisa.fr/Stephanie.Delaune/">Stéphanie Delaune</a>, <a href="http://people.irisa.fr/Patrick.Derbez/">Patrick Derbez</a> and <a href="https://cprudhom.github.io/">Charles Prud'homme</a>. 
+I am working on symmetric cryptanalysis problems like Cube attacks or Differential attacks. To do so, I use several solvers or even dedicated algorithms.
 
+</h3></p><p><h3>
+In this past two years, we published two papers in cryptography related conferences where we used many optimisation methods, (CP MILP SAT and dedicated algorithms). To tackle the hard problems of cryptography with CP, we often need to make new constraints. Indeed, there are very specific cryptographic properties we modeled in graph constraints or set constraints for solvers like <a href="https://choco-solver.org/">Choco</a> and <a href="https://github.com/chuffed/chuffed"> Chuffed</a>. 
+
+</h3></p><p><h3>
+I also worked on explanations and conflict analysis. In a CP 2020 workshop, we proposed an explanation generator to help the use of explanations in CP solvers.
+
+</h3></p><p><h3>
+Finally, I participate to <a href="https://gitlab.limos.fr/iia_lulibral/tagada"> TAGADA</a>, a generic tool to perform differential cryptanalysis on generic block ciphers with constraint programming. The idea is the following: anyone can model any cipher and the tool will perform differential cryptanalysis on it.
+
+</h3></p><p><h3>
+Before that, I had a Master's Degree in Nantes and Bruxelles focusing on optimisation techniques with CP teachers like Nicolas Beldiceanu and Eric Monfroy. I also did several research internships, on multi objective optimisation, static program analysis and CP explanations. Feel free to check my <a href="pdf/CV.pdf">CV</a> for more details.
+</h3>
+</p>
+</header>
+
+								<a href="#work" class="jumplink pic">
+									<span style="float:right" class="arrow icon solid fa-chevron-right">
+										<span >See my work</span>
+									</span>
+									<!-- <img src="images/me.jpg" alt="" /> -->
+								</a>
+</article>
 						<!-- Work -->
 							<article id="work" class="panel">
 								<header>
 									<h2>Publications</h2>
 								</header>
+<p>
 <lu>
 <li> Stéphanie Delaune, Patrick Derbez, Arthur Gontier, and Charles Prud’homme. New algorithm for exhausting optimal permutations for generalized feistel networks. <i>In Takanori Isobe and Santanu Sarkar, editors, Progress in Cryptology - INDOCRYPT 2022</i> - 23rd International Conference on Cryptology in India, Kolkata, India, December 11-14, 2022, Proceedings, volume 13774 of Lecture Notes in Computer Science, pages 103–124. Springer, 2022.
 <a href="https://eprint.iacr.org/2023/023.pdf">[pdf]</a>
+<a href="pdf/Slides2022Feistel.pdf">[Slides]</a>
+<a href="https://www.youtube.com/live/6canW5at3e4?feature=share&t=1534">[Talk]</a>
+
 </li>
 <li> Stéphanie Delaune, Patrick Derbez, Arthur Gontier, and Charles Prud’homme. A simpler model for recovering superpoly on trivium. <i>In Riham AlTawy and Andreas Hülsing, editors, Selected Areas in Cryptography - 28th International Conference, SAC 2021</i>, Virtual Event, September 29 - October 1, 2021, Revised Selected Papers, volume 13203 of Lecture Notes in Computer Science, pages 266–285. Springer, 2021
 <a href="https://eprint.iacr.org/2021/1191.pdf">[pdf]</a>
+<a href="pdf/Slides2021Trivium.pdf">[Slides]</a>
+<a href="https://youtu.be/UV7X9zJOJsw">[Talk]</a>
 </li>	
 <li> Stéphanie Delaune, Patrick Derbez, Arthur Gontier, and Charles Prud’Homme. Diffusion totale dans le schéma de Feistel généralisé. <i>In ROADEF 2022 : 23ème congrès annuel de la Société Française de Recherche Opérationnelle et d’Aide à la Décision</i>, Villeurbanne - Lyon, France, February 2022. INSA Lyon
 <a href="https://hal.science/hal-03595277v1/document">[pdf]</a>
+<a href="pdf/Slides2022ROADEF.pdf">[Slides]</a>
+
 </li>	
 <li> Arthur Gontier, Charlotte Truchet, and Charles Prud’Homme. Conflict analysis in CP solving: Explanation generation from constraint decomposition. <i>In CP 2020: 26th International Conference on Principles and Practice of Constraint Programming: Workshop: From Constraint Programming to Trustworthy AI, volume 12333 of Lecture Notes in Computer Science book series (LNCS) Also part of the Programming and Software Engineering book sub series (LNPSE)</i>, Louvain-la-Neuve, Belgium, September 2020.
 <a href="https://hal.science/hal-03179630v1/document">[pdf]</a>
+<a href="pdf/Slides2023ROADEF.pdf">[Slides]</a>
 </li>
 </lu>
+</p>
+
+								<header>
+									<h2>Teaching</h2>
+								</header>
+<lu>
+<li> 
+	Graph theory, 2020, Université de Rennes 1, Bachelor 3, 24H
+</li>
+<li> 
+	Mixed Integer Linear programming, 2020, Université de Rennes 1, Master 1, 12H
+</li>
+<li> 
+	Functional Programming, 2021, INSA Rennes, Master 1, 18H
+</li>
+<li> 
+	Computer science, 2021-2023, Université de Rennes 1, Bachelor 1, 72H
+</li>
+</lu>
+								<a href="#contact" class="jumplink pic">
+									<span style="float:right" class="arrow icon solid fa-chevron-right">
+										<span>Contact me</span>
+									</span>
+									<!-- <img src="images/me.jpg" alt="" /> -->
+								</a>
 							</article>
 
 						<!-- Contact -->
@@ -81,6 +144,7 @@
 								<p>
 									Office F423, IRISA, Rennes
 								</p>
+
 								<!-- <form action="#" method="post">
 									<div>
 										<div class="row">
@@ -102,15 +166,25 @@
 										</div>
 									</div>
 								</form> -->
+								<a href="#home" class="jumplink pic">
+									<span style="float:right" class="arrow icon solid fa-chevron-right">
+										<span>Home</span>
+									</span>
+									<!-- <img src="images/me.jpg" alt="" /> -->
+								</a>						
+									
 							</article>
 
 					</div>
 
 				<!-- Footer -->
 					<div id="footer">
-						<ul class="copyright">
+<p style="font-family: 'mm';">Those ho kno the truth may not live by it - <i style="font-family: 'mr';">Arthur Gontier</i></p>
+<!-- <p style="font-family: 'mr';">Arthur Gontier</p> -->
+						<!-- <ul class="copyright">
 							<li>&copy; None.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
+						</ul> -->
+
 					</div>
 
 			</div>
