@@ -144,7 +144,7 @@ def retarget_paths(html, prefix):
     """Rewrite root-relative asset references for a page served from /fr/."""
     if not prefix:
         return html
-    html = re.sub(r'(\s(?:href|src|srcset)=")(assets/|images/|pdf/)', r'\1' + prefix + r'\2', html)
+    html = re.sub(r'(\s(?:href|src|srcset)=")(assets/|images/|pdf/|favicon[\w.-]*\.(?:ico|png)|apple-touch-icon\.png)', r'\1' + prefix + r'\2', html)
     html = re.sub(r'(url\((["\']?))(assets/)', r'\1' + prefix + r'\3', html)
     return html
 
