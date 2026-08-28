@@ -1,312 +1,600 @@
 <!DOCTYPE HTML>
-<!--
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Arthur Gontier</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+<title>Arthur Gontier</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Arthur Gontier - postdoctoral researcher, FATA section, University of Glasgow. Constraint solvers, proof logging, cryptanalysis." />
+<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+<style>
 
-		<!-- Wrapper-->
-			<div id="wrapper">
+/* ------------------------------------------------------------------ fonts */
 
-				<!-- Nav -->
-					<nav id="nav">
-						<a href="#" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#about" class="icon solid fa-scroll"><span>About me</span></a>
-						<a href="#work" class="icon solid fa-folder"><span>Work</span></a>
-						<a href="#contact" class="icon solid fa-paper-plane"><span>Contact</span></a>
-						<!-- <a href="https://twitter.com/ajlkn" class="icon brands fa-twitter"><span>Twitter</span></a> -->
-					</nav>
+@font-face { font-family: 'mm'; src: url(assets/css/MadokaMusical.ttf) format('truetype'); font-display: swap; }
+@font-face { font-family: 'mr'; src: url(assets/css/runes.ttf) format('truetype'); font-display: swap; }
 
-				<!-- Main -->
-					<div id="main">
+/* ------------------------------------------------------------------ base  */
 
-						<!-- Me -->
-							<article id="home" class="panel intro">
-								<header>
-									<h1>Arthur Gontier</h1>
-									<p>Postdoctoral researcher</p>
-									<p>Subject: Constraint solver producing proof of reasoning</p>
-									<p>FATA team, University of Glasgow </p>
-								</header>
-								<a href="#about" class="jumplink pic">
-									<span class="arrow icon solid fa-chevron-right"><span>About me</span></span>
-									<img src="images/me.jpg" alt="" />
-								</a>
-								</article>
-<article id="about" class="panel">
-<header>
-<p>
-<h3>
-Hi there! I am Arthur Gontier. Since January 2024, I am a researcher in the <a href="https://www.gla.ac.uk/schools/computing/research/researchsections/fata-section/">FATA team</a> in the University of Glasgow.
-I am working with <a href="https://ciaranm.github.io/"> Ciaran McCreesh</a>, <a href="https://matthewmcilree.com/"> Matthew McIlree</a> and the <a href="https://veripb.github.io/"> VeriPB group</a> on constraint solvers that produces proofs of reasoning. 
+:root {
+	--sheet:      #ffffff;
+	--ink:        #2b2b2f;
+	--ink-soft:   #5d6068;
+	--ink-faint:  #8a8d95;
+	--rule:       #e3e4e8;
+	--accent:     #7a2f2f;
+	--accent-alt: #1f4f63;
+	--tag:        #f2f2f4;
+	--maxw:       58em;
+}
 
-</h3></p><p><h3>	
-Before that, I was a PhD student in symmetric cryptanalysis with declarative languages in the <a href="https://team.inria.fr/capsule/">CAPSULE team</a> in Rennes supervised by <a href="https://people.irisa.fr/Stephanie.Delaune/">Stéphanie Delaune</a>, <a href="http://people.irisa.fr/Patrick.Derbez/">Patrick Derbez</a> and <a href="https://cprudhom.github.io/">Charles Prud'homme</a>. 
-My PhD thesis can be found <a href="https://ged.univ-rennes1.fr/nuxeo/site/esupversions/d53e58d8-c471-46ff-90b6-c5138ef141b2?inline">here</a>.
-I was working on symmetric cryptanalysis problems like Cube attacks or Differential attacks. To do so, I used several solvers or even dedicated algorithms.
+* { box-sizing: border-box; }
 
-</h3></p><p><h3>
-In these three years, we published three papers in cryptography related conferences where we used many optimisation methods, (CP MILP SAT and dedicated algorithms). To tackle the hard problems of cryptography with CP, we often needed to make new constraints. Indeed, there are very specific cryptographic properties we modeled in graph constraints or set constraints for solvers like <a href="https://choco-solver.org/">Choco</a> and <a href="https://github.com/chuffed/chuffed"> Chuffed</a>. 
+html { scroll-behavior: smooth; scroll-padding-top: 4.5em; }
 
-</h3></p><p><h3>
-I also worked on explanations and conflict analysis. In a CP 2020 workshop, we proposed an explanation generator to help the use of explanations in CP solvers.
+body {
+	margin: 0;
+	background-image: url("assets/css/images/overlay.png"), url("assets/css/images/bg.jpg");
+	background-repeat: repeat, no-repeat;
+	background-size: auto, cover;
+	background-attachment: fixed;
+	background-position: center;
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 16.5px;
+	line-height: 1.62;
+	color: var(--ink);
+	-webkit-text-size-adjust: 100%;
+}
 
-</h3></p><p><h3>
-Finally, I participated to <a href="https://gitlab.limos.fr/iia_lulibral/tagada"> TAGADA</a>, a generic tool to perform differential cryptanalysis on generic block ciphers with constraint programming. The idea is the following: anyone can model any cipher and the tool will perform differential cryptanalysis on it.
+@media screen and (max-width: 736px) { body { font-size: 15.5px; } }
 
-</h3></p><p><h3>
-Before that, I had a Master's Degree in Nantes and Bruxelles focusing on optimisation techniques with CP teachers like Nicolas Beldiceanu and Eric Monfroy. I also did several research internships, on multi objective optimisation, static program analysis and CP explanations. Feel free to check my <a href="pdf/CV.pdf">CV</a> for more details.
-</h3>
-</p>
-</header>
+a { color: var(--accent-alt); text-decoration: none; border-bottom: 1px solid rgba(31,79,99,0.28); }
+a:hover { color: var(--accent); border-bottom-color: rgba(122,47,47,0.5); }
 
-								<a href="#work" class="jumplink pic">
-									<span style="float:right" class="arrow icon solid fa-chevron-right">
-										<span >See my work</span>
-									</span>
-									<!-- <img src="images/me.jpg" alt="" /> -->
-								</a>
-</article>
-						<!-- Work -->
-							<article id="work" class="panel">
-								<header>
-									<h2>Publications</h2>
-								</header>
-<p>
-<!-- <lu>
-<li>
-Berhan Oumer Adame, Bart Bogaerts, Benjamin Bogø, Simon Dold, Arthur Gontier, Wietze Koops, Ciaran McCreesh, Matthew McIlree, Jakob Nordström, Andy Oertel, Adrian Rebola‑Pardo, Mark Turnbull.
-VeriPB proof trimming.
-<i>Under submission</i>, 2026.
-</li>
-<li>
-Markus Anders, Bart Bogaerts, Benjamin Bogø, Arthur Gontier, Wietze Koops, Ciaran McCreesh, Magnus O. Myreen, Jakob Nordström, Andy Oertel, Adrian Rebola‑Pardo, Yong Kiam Tan, <i>et al.</i>
-Faster Certified Symmetry Breaking Using Orders With Auxiliary Variables.
-<i>Proceedings of the 40th AAAI Conference on Artificial Intelligence (AAAI 2026)</i>, 2026.
-<a href="https://ciaranm.github.io/papers/aaai2026-symmetries.pdf">[pdf]</a>
-<a href="https://github.com/markusa4/satsuma">[Code]</a>
-</li>
-<li>
-François Delobel, Patrick Derbez, Arthur Gontier, Loïc Rouquette, and Christine Solnon.
-A CP-based automatic tool for instantiating truncated differential characteristics.
-<i>International Conference on Cryptology in India (INDOCRYPT 2023)</i>, pages 247–268. Springer, 2023.
-<a href="https://eprint.iacr.org/2023/1831.pdf">[pdf]</a>
-<a href="pdf/Slides2023TAGADA.pdf">[Slides]</a> 
-<a href="https://gitlab.com/tagada-framework/tagada">[Code]</a>
-</li>
-<li> Stéphanie Delaune, Patrick Derbez, Arthur Gontier, and Charles Prud’homme. New algorithm for exhausting optimal permutations for generalized feistel networks. <i>In Takanori Isobe and Santanu Sarkar, editors, Progress in Cryptology - INDOCRYPT 2022</i> - 23rd International Conference on Cryptology in India, Kolkata, India, December 11-14, 2022, Proceedings, volume 13774 of Lecture Notes in Computer Science, pages 103–124. Springer, 2022.
-<a href="https://eprint.iacr.org/2023/023.pdf">[pdf]</a>
-<a href="pdf/Slides2022Feistel.pdf">[Slides]</a>
-<a href="https://www.youtube.com/live/6canW5at3e4?feature=share&t=1534">[Talk]</a>
-<a href="https://gitlab.inria.fr/agontier/ANewAlgoForGFN">[Code]</a>
-</li>
-<li> Stéphanie Delaune, Patrick Derbez, Arthur Gontier, and Charles Prud’homme. A simpler model for recovering superpoly on trivium. <i>In Riham AlTawy and Andreas Hülsing, editors, Selected Areas in Cryptography - 28th International Conference, SAC 2021</i>, Virtual Event, September 29 - October 1, 2021, Revised Selected Papers, volume 13203 of Lecture Notes in Computer Science, pages 266–285. Springer, 2021
-<a href="https://eprint.iacr.org/2021/1191.pdf">[pdf]</a>
-<a href="pdf/Slides2021Trivium.pdf">[Slides]</a>
-<a href="https://youtu.be/UV7X9zJOJsw">[Talk]</a>
-<a href="https://gitlab.inria.fr/agontier/trivium-superpoly">[Code]</a>
-</li>	
-<li> Stéphanie Delaune, Patrick Derbez, Arthur Gontier, and Charles Prud’Homme. Diffusion totale dans le schéma de Feistel généralisé. <i>In ROADEF 2022 : 23ème congrès annuel de la Société Française de Recherche Opérationnelle et d’Aide à la Décision</i>, Villeurbanne - Lyon, France, February 2022. INSA Lyon
-<a href="https://hal.science/hal-03595277v1/document">[pdf]</a>
-<a href="pdf/Slides2022ROADEF.pdf">[Slides]</a>
-</li>	
-<li> Arthur Gontier, Charlotte Truchet, and Charles Prud’Homme. Conflict analysis in CP solving: Explanation generation from constraint decomposition. <i>In CP 2020: 26th International Conference on Principles and Practice of Constraint Programming: Workshop: From Constraint Programming to Trustworthy AI, volume 12333 of Lecture Notes in Computer Science book series (LNCS) Also part of the Programming and Software Engineering book sub series (LNPSE)</i>, Louvain-la-Neuve, Belgium, September 2020.
-<a href="https://hal.science/hal-03179630v1/document">[pdf]</a>
-<a href="pdf/Slides2023ROADEF.pdf">[Slides]</a>
-<a href="https://github.com/ArthurGontierPro/Explaining-Global-Constraints-from-Decompositions">[Code]</a>
-</li>
-</lu> -->
-<ul>
-<li>
-VeriPB proof trimming.  
-Berhan Oumer Adame, Bart Bogaerts, Benjamin Bogø, Simon Dold, Arthur Gontier, Wietze Koops, Ciaran McCreesh, Matthew McIlree, Jakob Nordström, Andy Oertel, Adrian Rebola‑Pardo, Mark Turnbull.  
-<i>Under submission</i>, 2026.
-</li>
+h1, h2, h3 { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: -0.01em; }
 
-<li>
-Faster Certified Symmetry Breaking Using Orders With Auxiliary Variables.  
-Markus Anders, Bart Bogaerts, Benjamin Bogø, Arthur Gontier, Wietze Koops, Ciaran McCreesh, Magnus O. Myreen, Jakob Nordström, Andy Oertel, Adrian Rebola‑Pardo, Yong Kiam Tan, <i>et al.</i>  
-<i>Proceedings of the 40th AAAI Conference on Artificial Intelligence (AAAI 2026)</i>, 2026.  
-<a href="https://ciaranm.github.io/papers/aaai2026-symmetries.pdf">[pdf]</a>
-<a href="https://github.com/markusa4/satsuma">[Code]</a>
-</li>
+/* ------------------------------------------------------------------ shell */
 
-<li>
-A CP-based automatic tool for instantiating truncated differential characteristics.  
-François Delobel, Patrick Derbez, Arthur Gontier, Loïc Rouquette, and Christine Solnon.  
-<i>International Conference on Cryptology in India (INDOCRYPT 2023)</i>, pages 247–268. Springer, 2023.  
-<a href="https://eprint.iacr.org/2023/1831.pdf">[pdf]</a>
-<a href="pdf/Slides2023TAGADA.pdf">[Slides]</a>
-<a href="https://gitlab.com/tagada-framework/tagada">[Code]</a>
-</li>
+#sheet {
+	max-width: var(--maxw);
+	margin: 2.5em auto 3.5em auto;
+	background: var(--sheet);
+	box-shadow: 0 1.5em 4em rgba(0,0,0,0.45);
+	opacity: 0;
+	transform: translateY(0.6em);
+	transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+}
 
-<li>
-New algorithm for exhausting optimal permutations for generalized feistel networks.  
-Stéphanie Delaune, Patrick Derbez, Arthur Gontier, and Charles Prud’homme.  
-<i>In Takanori Isobe and Santanu Sarkar, editors, Progress in Cryptology - INDOCRYPT 2022</i> - 23rd International Conference on Cryptology in India, Kolkata, India, December 11-14, 2022, Proceedings, volume 13774 of Lecture Notes in Computer Science, pages 103–124. Springer, 2022.  
-<a href="https://eprint.iacr.org/2023/023.pdf">[pdf]</a>
-<a href="pdf/Slides2022Feistel.pdf">[Slides]</a>
-<a href="https://www.youtube.com/live/6canW5at3e4?feature=share&t=1534">[Talk]</a>
-<a href="https://gitlab.inria.fr/agontier/ANewAlgoForGFN">[Code]</a>
-</li>
+body.is-ready #sheet { opacity: 1; transform: none; }
 
-<li>
-A simpler model for recovering superpoly on trivium.  
-Stéphanie Delaune, Patrick Derbez, Arthur Gontier, and Charles Prud’homme.  
-<i>In Riham AlTawy and Andreas Hülsing, editors, Selected Areas in Cryptography - 28th International Conference, SAC 2021</i>, Virtual Event, September 29 - October 1, 2021, Revised Selected Papers, volume 13203 of Lecture Notes in Computer Science, pages 266–285. Springer, 2021  
-<a href="https://eprint.iacr.org/2021/1191.pdf">[pdf]</a>
-<a href="pdf/Slides2021Trivium.pdf">[Slides]</a>
-<a href="https://youtu.be/UV7X9zJOJsw">[Talk]</a>
-<a href="https://gitlab.inria.fr/agontier/trivium-superpoly">[Code]</a>
-</li>
+@media screen and (max-width: 980px) { #sheet { margin: 0 auto; } }
 
-<li>
-Diffusion totale dans le schéma de Feistel généralisé.  
-Stéphanie Delaune, Patrick Derbez, Arthur Gontier, and Charles Prud’Homme.  
-<i>In ROADEF 2022 : 23ème congrès annuel de la Société Française de Recherche Opérationnelle et d’Aide à la Décision</i>, Villeurbanne - Lyon, France, February 2022. INSA Lyon  
-<a href="https://hal.science/hal-03595277v1/document">[pdf]</a>
-<a href="pdf/Slides2022ROADEF.pdf">[Slides]</a>
-</li>
+/* ------------------------------------------------------------------ header */
 
-<li>
-Conflict analysis in CP solving: Explanation generation from constraint decomposition.  
-Arthur Gontier, Charlotte Truchet, and Charles Prud’Homme.  
-<i>In CP 2020: 26th International Conference on Principles and Practice of Constraint Programming: Workshop: From Constraint Programming to Trustworthy AI, volume 12333 of Lecture Notes in Computer Science book series (LNCS) Also part of the Programming and Software Engineering book sub series (LNPSE)</i>, Louvain-la-Neuve, Belgium, September 2020.  
-<a href="https://hal.science/hal-03179630v1/document">[pdf]</a>
-<a href="pdf/Slides2023ROADEF.pdf">[Slides]</a>
-<a href="https://github.com/ArthurGontierPro/Explaining-Global-Constraints-from-Decompositions">[Code]</a>
-</li>
-</ul>
+header.masthead {
+	display: flex;
+	align-items: center;
+	gap: 2em;
+	padding: 2.75em 3em 2.25em 3em;
+	border-bottom: 1px solid var(--rule);
+}
 
-</p>
-								<header>
-									<h2>Invited Talks</h2>
-								</header>								
-<p><ul><li>
-Progress on VeriPB proof trimming. Arthur Gontier. International Workshop on Highlights in Organizing and Optimizing Proof-logging Systems (WOOPS) 2025.
-<a href="https://jakobnordstrom.se/WHOOPS25/slides/ArthurGontier.pdf">[Slides]</a>
-<a href="https://youtu.be/LCgSG3CgfSI?si=UosExFefs8ZayO6G">[Talk]</a>
-<li>
-First results on VeriPB proof trimming. Arthur Gontier. International Workshop on Highlights in Organizing and Optimizing Proof-logging Systems (WOOPS) 2024.
-<a href="https://jakobnordstrom.se/WHOOPS24/slides/ArthurGontier.pdf">[Slides]</a>
-<a href="https://youtu.be/nCRxQUi-xrs?si=h8WxoOQUjxHEijkP">[Talk]</a>
-</li>
-</li></ul></p>
-</p>
-								<header>
-									<h2>PhD</h2>
-								</header>
-<p><ul><li>
-[en] Cryptanalysis of symmetric cipher using generic solvers [fr] Utilisation de solveurs génériques pour la cryptanalyse de chiffrements symétriques. Arthur Gontier.
-Thèse de doctorat, Université de Rennes, 2023.
-<a href="https://ged.univ-rennes1.fr/nuxeo/site/esupversions/d53e58d8-c471-46ff-90b6-c5138ef141b2?inline">[pdf]</a>
-<a href="pdf/Slides2023PhD.pdf">[Slides]</a>
-<a href="https://www.youtube.com/live/4HPEH43bKuc?si=TzZlYB9girkBYrjC&t=4254">[Defence live]</a>
-</li></ul></p>
-								<header>
-									<h2>Teaching</h2>
-								</header>
-<ul>
-<li> 
-	Graph theory, 2020, Université de Rennes 1, Bachelor 3, 24H
-</li>
-<li> 
-	Mixed Integer Linear programming, 2020, Université de Rennes 1, Master 1, 12H
-</li>
-<li> 
-	Functional Programming, 2021, INSA Rennes, Master 1, 18H
-</li>
-<li> 
-	Computer science, 2021-2023, Université de Rennes 1, Bachelor 1, 72H
-</li>
-</ul>
-								<a href="#contact" class="jumplink pic">
-									<span style="float:right" class="arrow icon solid fa-chevron-right">
-										<span>Contact me</span>
-									</span>
-									<!-- <img src="images/me.jpg" alt="" /> -->
-								</a>
-							</article>
+header.masthead .portrait {
+	position: relative;
+	flex: 0 0 auto;
+	width: 9.5em;
+	height: 9.5em;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 0.4em 1.5em rgba(0,0,0,0.25);
+}
 
-						<!-- Contact -->
-							<article id="contact" class="panel">
-								<header>
-									<h2>Contact me</h2>
-								</header>
-								<div class="row">
-								<div class="col-4 col-6-medium col-12-small">
-									<p>arthur.pro.gontier@gmail.com</p>
-								</div>
-								<div class="col-4 col-6-medium col-12-small">
-									<p>arthur.gontier@glasgow.ac.uk</p>
-								</div></div>
-								<header>
-									<h2>Find me</h2>
-								</header>
-								<p>
-									Office G091, School of Computing Science, Sir Alwyn Williams Building, Glasgow
-								</p>
+header.masthead .portrait img {
+	display: block; width: 100%; height: 100%;
+	object-fit: cover; object-position: center;
+	transition: transform 0.8s ease;
+}
 
-								<!-- <form action="#" method="post">
-									<div>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<input type="text" name="name" placeholder="Name" />
-											</div>
-											<div class="col-6 col-12-medium">
-												<input type="text" name="email" placeholder="Email" />
-											</div>
-											<div class="col-12">
-												<input type="text" name="subject" placeholder="Subject" />
-											</div>
-											<div class="col-12">
-												<textarea name="message" placeholder="Message" rows="6"></textarea>
-											</div>
-											<div class="col-12">
-												<input type="submit" value="Send Message" />
-											</div>
-										</div>
-									</div>
-								</form> -->
-								<a href="#home" class="jumplink pic">
-									<span style="float:right" class="arrow icon solid fa-chevron-right">
-										<span>Home</span>
-									</span>
-									<!-- <img src="images/me.jpg" alt="" /> -->
-								</a>						
-									
-							</article>
+header.masthead .portrait:hover img { transform: scale(1.06); }
 
-					</div>
+header.masthead .portrait:after {
+	content: ''; position: absolute; inset: 0;
+	background: url("assets/css/images/overlay.png");
+	opacity: 0.35; pointer-events: none;
+}
 
-				<!-- Footer -->
-					<div id="footer">
-<!-- <p style="font-family: 'mm';"> Ti yb evil ton yam hturt eht vonk ohv esoht - <i style="font-family: 'mr';">Arthur Gontier</i></p> -->
-<p style="font-family: 'mm';"> Music is loud Math and math is silent music - <i style="font-family: 'mr';">E.Heriot</i></p>
-<!-- <p style="font-family: 'mr';">Arthur Gontier</p> -->
-						<!-- <ul class="copyright">
-							<li>&copy; None.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul> -->
+header.masthead h1 {
+	margin: 0 0 0.15em 0;
+	font-size: 2.35em;
+	line-height: 1.1;
+}
 
-					</div>
+header.masthead .role {
+	margin: 0 0 0.7em 0;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 1.02em;
+	color: var(--ink-soft);
+}
 
+header.masthead ul.facts {
+	list-style: none;
+	margin: 0; padding: 0;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 0.88em;
+	color: var(--ink-soft);
+}
+
+header.masthead ul.facts li { margin: 0.2em 0; }
+header.masthead ul.facts li .fas, header.masthead ul.facts li .far { color: var(--ink-faint); width: 1.2em; margin-right: 0.45em; }
+
+/* ------------------------------------------------------------------ nav */
+
+nav#nav {
+	position: sticky; top: 0; z-index: 10;
+	display: flex; flex-wrap: wrap;
+	gap: 0.25em 1.6em;
+	padding: 0.75em 3em;
+	background: rgba(255,255,255,0.96);
+	backdrop-filter: blur(6px);
+	border-bottom: 1px solid var(--rule);
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 0.86em;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+nav#nav a {
+	position: relative;
+	color: var(--ink-soft);
+	border: none;
+	padding: 0.2em 0;
+}
+
+nav#nav a:after {
+	content: ''; position: absolute; left: 0; bottom: 0;
+	height: 2px; width: 100%;
+	background: var(--accent);
+	transform: scaleX(0); transform-origin: left;
+	transition: transform 0.35s ease;
+}
+
+nav#nav a:hover, nav#nav a.active { color: var(--accent); }
+nav#nav a:hover:after, nav#nav a.active:after { transform: scaleX(1); }
+
+/* ------------------------------------------------------------------ sections */
+
+section {
+	padding: 2.2em 3em;
+	border-bottom: 1px solid var(--rule);
+	opacity: 0;
+	transform: translateY(1.1em);
+	transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+section.revealed { opacity: 1; transform: none; }
+body.no-anim section { opacity: 1; transform: none; }
+
+section > h2 {
+	margin: 0 0 0.9em 0;
+	font-size: 0.95em;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	color: var(--accent);
+}
+
+section > h2:after {
+	content: '';
+	display: block;
+	width: 2.2em; height: 2px;
+	margin-top: 0.5em;
+	background: var(--accent);
+	opacity: 0.35;
+}
+
+section p { margin: 0 0 0.85em 0; }
+section p:last-child { margin-bottom: 0; }
+
+ul.interests { margin: 0; padding-left: 1.15em; }
+ul.interests li { margin: 0.35em 0; }
+ul.interests li b { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.94em; }
+
+/* ------------------------------------------------------------------ publications */
+
+ol.pubs { list-style: none; margin: 0; padding: 0; counter-reset: pub; }
+
+ol.pubs > li {
+	position: relative;
+	padding: 0.75em 0 0.75em 0;
+	border-top: 1px solid var(--rule);
+	transition: background 0.25s ease;
+}
+
+ol.pubs > li:first-child { border-top: none; }
+ol.pubs > li:hover { background: #fbfbfc; }
+
+.pub-title {
+	display: block;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	font-size: 1.01em;
+	line-height: 1.35;
+	margin-bottom: 0.15em;
+}
+
+.pub-authors { display: block; font-size: 0.94em; color: var(--ink-soft); }
+.pub-authors .me { color: var(--ink); font-weight: bold; }
+.pub-venue { display: block; font-size: 0.92em; color: var(--ink-faint); font-style: italic; margin-top: 0.1em; }
+
+.pub-links { margin-top: 0.4em; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.78em; }
+
+.pub-links a {
+	display: inline-block;
+	margin: 0.18em 0.35em 0 0;
+	padding: 0.15em 0.7em;
+	border: 1px solid var(--rule);
+	border-radius: 2em;
+	background: var(--tag);
+	color: var(--ink-soft);
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.pub-links a:hover {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: #fff;
+	transform: translateY(-1px);
+}
+
+/* ------------------------------------------------------------------ teaching table */
+
+table.teaching { width: 100%; border-collapse: collapse; font-size: 0.94em; }
+table.teaching td { padding: 0.5em 0.8em 0.5em 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table.teaching tr:last-child td { border-bottom: none; }
+table.teaching td.course { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 600; }
+table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
+
+/* ------------------------------------------------------------------ contact */
+
+.contact-grid { display: flex; flex-wrap: wrap; gap: 1.5em 3em; }
+.contact-grid div { min-width: 14em; }
+.contact-grid .label {
+	display: block;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 0.74em; text-transform: uppercase; letter-spacing: 0.12em;
+	color: var(--ink-faint); margin-bottom: 0.2em;
+}
+
+/* ------------------------------------------------------------------ footer */
+
+#footer {
+	padding: 1.6em 3em 2em 3em;
+	text-align: center;
+	color: var(--ink-faint);
+	font-size: 0.95em;
+}
+
+#footer .quote { font-family: 'mm'; }
+#footer .quote i { font-family: 'mr'; font-style: normal; }
+
+/* ------------------------------------------------------------------ top link */
+
+#totop {
+	position: fixed; right: 1.4em; bottom: 1.4em; z-index: 20;
+	width: 2.6em; height: 2.6em; line-height: 2.6em;
+	text-align: center;
+	background: rgba(0,0,0,0.62);
+	color: #fff; border: none; border-radius: 50%;
+	opacity: 0; pointer-events: none;
+	transition: opacity 0.4s ease, transform 0.4s ease, background 0.25s ease;
+	transform: translateY(0.6em);
+}
+
+#totop.show { opacity: 1; pointer-events: auto; transform: none; }
+#totop:hover { background: var(--accent); color: #fff; }
+
+/* ------------------------------------------------------------------ small screens */
+
+@media screen and (max-width: 736px) {
+	header.masthead { flex-direction: column; text-align: center; gap: 1.2em; padding: 2em 1.5em 1.5em 1.5em; }
+	header.masthead ul.facts { text-align: left; display: inline-block; }
+	nav#nav { padding: 0.6em 1.5em; gap: 0.2em 1.1em; font-size: 0.78em; }
+	section, #footer { padding-left: 1.5em; padding-right: 1.5em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html { scroll-behavior: auto; }
+	#sheet, section { transition: none; opacity: 1; transform: none; }
+}
+
+</style>
+</head>
+<body class="is-preload">
+
+<div id="sheet">
+
+	<!-- Masthead -->
+	<header class="masthead">
+		<div class="portrait"><img src="images/me.jpg" alt="Arthur Gontier" /></div>
+		<div>
+			<h1>Arthur Gontier</h1>
+			<p class="role">Postdoctoral researcher &mdash; constraint solvers that produce proofs of their reasoning</p>
+			<ul class="facts">
+				<li><span class="fas fa-university"></span><a href="https://www.gla.ac.uk/schools/computing/research/researchsections/fata-section/">FATA section</a>, School of Computing Science, University of Glasgow</li>
+				<li><span class="fas fa-envelope"></span><a href="mailto:arthur.gontier@glasgow.ac.uk">arthur.gontier@glasgow.ac.uk</a></li>
+				<li><span class="fas fa-map-marker-alt"></span>Office G091, Sir Alwyn Williams Building, Glasgow</li>
+				<li><span class="fas fa-file-alt"></span><a href="pdf/CV.pdf">Curriculum vitae</a> &middot; <a href="https://ged.univ-rennes1.fr/nuxeo/site/esupversions/d53e58d8-c471-46ff-90b6-c5138ef141b2?inline">PhD thesis</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- Nav -->
+	<nav id="nav">
+		<a href="#about">About</a>
+		<a href="#research">Research</a>
+		<a href="#publications">Publications</a>
+		<a href="#talks">Talks</a>
+		<a href="#phd">PhD</a>
+		<a href="#teaching">Teaching</a>
+		<a href="#contact">Contact</a>
+	</nav>
+
+	<!-- About -->
+	<section id="about">
+		<h2>About</h2>
+		<p>
+		Since January 2024 I am a postdoctoral researcher at the University of Glasgow, in the
+		<a href="https://www.gla.ac.uk/schools/computing/research/researchsections/fata-section/">FATA section</a>.
+		I work with <a href="https://ciaranm.github.io/">Ciaran McCreesh</a>,
+		<a href="https://matthewmcilree.com/">Matthew McIlree</a> and the
+		<a href="https://veripb.github.io/">VeriPB group</a> on constraint solvers that produce proofs of their reasoning.
+		</p>
+		<p>
+		Before that I was a PhD student in symmetric cryptanalysis with declarative languages, in the
+		<a href="https://team.inria.fr/capsule/">CAPSULE team</a> in Rennes, supervised by
+		<a href="https://people.irisa.fr/Stephanie.Delaune/">St&eacute;phanie Delaune</a>,
+		<a href="http://people.irisa.fr/Patrick.Derbez/">Patrick Derbez</a> and
+		<a href="https://cprudhom.github.io/">Charles Prud'homme</a>. I worked on problems such as cube attacks and
+		differential attacks, using several solvers as well as dedicated algorithms.
+		</p>
+		<p>
+		Earlier, I obtained a Master's degree in Nantes and Brussels focused on optimisation techniques, with CP teachers
+		such as Nicolas Beldiceanu and Eric Monfroy, and did several research internships on multi-objective optimisation,
+		static program analysis and CP explanations.
+		</p>
+	</section>
+
+	<!-- Research -->
+	<section id="research">
+		<h2>Research interests</h2>
+		<ul class="interests">
+			<li><b>Proof logging for constraint solvers.</b> Making solvers justify every inference they make, so that their answers can be checked independently. My current work is on trimming VeriPB proofs to make verification tractable.</li>
+			<li><b>Constraint programming for cryptanalysis.</b> Modelling very specific cryptographic properties as graph or set constraints for solvers such as <a href="https://choco-solver.org/">Choco</a> and <a href="https://github.com/chuffed/chuffed">Chuffed</a>. In three years of PhD we published three papers using CP, MILP, SAT and dedicated algorithms.</li>
+			<li><b>Explanations and conflict analysis.</b> Generating explanations for global constraints from their decompositions, to make explanations easier to use in CP solvers.</li>
+			<li><b>Generic cryptanalysis tooling.</b> I contributed to <a href="https://gitlab.limos.fr/iia_lulibral/tagada">TAGADA</a>, a tool where anyone can model a block cipher and have differential cryptanalysis performed on it automatically.</li>
+		</ul>
+	</section>
+
+	<!-- Publications -->
+	<section id="publications">
+		<h2>Publications</h2>
+		<ol class="pubs">
+
+			<li>
+				<span class="pub-title">Trimming pseudo-Boolean proofs</span>
+				<span class="pub-authors">Berhan Oumer Adame, Bart Bogaerts, Benjamin Bog&oslash;, Simon Dold, <span class="me">Arthur Gontier</span>, Wietze Koops, Ciaran McCreesh, Matthew McIlree, Jakob Nordstr&ouml;m, Andy Oertel, Adrian Rebola&#8209;Pardo, Mark Turnbull</span>
+				<span class="pub-venue">Formal Methods in Computer-Aided Design (FMCAD 2026), Graz, Austria, 14&ndash;18 September 2026 &mdash; accepted for publication</span>
+				<span class="pub-links">
+					<a href="https://jakobnordstrom.se/docs/publications/TrimmingPseudo-BooleanProofs_FMCAD.pdf">pdf</a>
+					<a href="https://zenodo.org/records/20136181">code</a>
+				</span>
+			</li>
+
+			<li>
+				<span class="pub-title">Faster certified symmetry breaking using orders with auxiliary variables</span>
+				<span class="pub-authors">Markus Anders, Bart Bogaerts, Benjamin Bog&oslash;, <span class="me">Arthur Gontier</span>, Wietze Koops, Ciaran McCreesh, Magnus O. Myreen, Jakob Nordstr&ouml;m, Andy Oertel, Adrian Rebola&#8209;Pardo, Yong Kiam Tan, et al.</span>
+				<span class="pub-venue">40th AAAI Conference on Artificial Intelligence (AAAI 2026), 2026</span>
+				<span class="pub-links">
+					<a href="https://ciaranm.github.io/papers/aaai2026-symmetries.pdf">pdf</a>
+					<a href="https://github.com/markusa4/satsuma">code</a>
+				</span>
+			</li>
+
+			<li>
+				<span class="pub-title">A CP-based automatic tool for instantiating truncated differential characteristics</span>
+				<span class="pub-authors">Fran&ccedil;ois Delobel, Patrick Derbez, <span class="me">Arthur Gontier</span>, Lo&iuml;c Rouquette, Christine Solnon</span>
+				<span class="pub-venue">International Conference on Cryptology in India (INDOCRYPT 2023), pages 247&ndash;268, Springer, 2023</span>
+				<span class="pub-links">
+					<a href="https://eprint.iacr.org/2023/1831.pdf">pdf</a>
+					<a href="pdf/Slides2023TAGADA.pdf">slides</a>
+					<a href="https://gitlab.com/tagada-framework/tagada">code</a>
+				</span>
+			</li>
+
+			<li>
+				<span class="pub-title">New algorithm for exhausting optimal permutations for generalized Feistel networks</span>
+				<span class="pub-authors">St&eacute;phanie Delaune, Patrick Derbez, <span class="me">Arthur Gontier</span>, Charles Prud'homme</span>
+				<span class="pub-venue">Progress in Cryptology &ndash; INDOCRYPT 2022, LNCS 13774, pages 103&ndash;124, Springer, 2022</span>
+				<span class="pub-links">
+					<a href="https://eprint.iacr.org/2023/023.pdf">pdf</a>
+					<a href="pdf/Slides2022Feistel.pdf">slides</a>
+					<a href="https://www.youtube.com/live/6canW5at3e4?feature=share&amp;t=1534">talk</a>
+					<a href="https://gitlab.inria.fr/agontier/ANewAlgoForGFN">code</a>
+				</span>
+			</li>
+
+			<li>
+				<span class="pub-title">A simpler model for recovering superpoly on Trivium</span>
+				<span class="pub-authors">St&eacute;phanie Delaune, Patrick Derbez, <span class="me">Arthur Gontier</span>, Charles Prud'homme</span>
+				<span class="pub-venue">Selected Areas in Cryptography &ndash; SAC 2021, LNCS 13203, pages 266&ndash;285, Springer, 2021</span>
+				<span class="pub-links">
+					<a href="https://eprint.iacr.org/2021/1191.pdf">pdf</a>
+					<a href="pdf/Slides2021Trivium.pdf">slides</a>
+					<a href="https://youtu.be/UV7X9zJOJsw">talk</a>
+					<a href="https://gitlab.inria.fr/agontier/trivium-superpoly">code</a>
+				</span>
+			</li>
+
+			<li>
+				<span class="pub-title">Diffusion totale dans le sch&eacute;ma de Feistel g&eacute;n&eacute;ralis&eacute;</span>
+				<span class="pub-authors">St&eacute;phanie Delaune, Patrick Derbez, <span class="me">Arthur Gontier</span>, Charles Prud'homme</span>
+				<span class="pub-venue">ROADEF 2022, 23<sup>e</sup> congr&egrave;s annuel de la Soci&eacute;t&eacute; Fran&ccedil;aise de Recherche Op&eacute;rationnelle et d'Aide &agrave; la D&eacute;cision, Villeurbanne &ndash; Lyon, France, February 2022</span>
+				<span class="pub-links">
+					<a href="https://hal.science/hal-03595277v1/document">pdf</a>
+					<a href="pdf/Slides2022ROADEF.pdf">slides</a>
+				</span>
+			</li>
+
+			<li>
+				<span class="pub-title">Conflict analysis in CP solving: explanation generation from constraint decomposition</span>
+				<span class="pub-authors"><span class="me">Arthur Gontier</span>, Charlotte Truchet, Charles Prud'homme</span>
+				<span class="pub-venue">CP 2020 workshop &ldquo;From Constraint Programming to Trustworthy AI&rdquo;, 26th International Conference on Principles and Practice of Constraint Programming, Louvain-la-Neuve, Belgium, September 2020</span>
+				<span class="pub-links">
+					<a href="https://hal.science/hal-03179630v1/document">pdf</a>
+					<a href="pdf/Slides2023ROADEF.pdf">slides</a>
+					<a href="https://github.com/ArthurGontierPro/Explaining-Global-Constraints-from-Decompositions">code</a>
+				</span>
+			</li>
+
+		</ol>
+	</section>
+
+	<!-- Talks -->
+	<section id="talks">
+		<h2>Invited talks</h2>
+		<ol class="pubs">
+			<li>
+				<span class="pub-title">Trimming pseudo-Boolean proofs</span>
+				<span class="pub-venue">International Workshop on Highlights in Organizing and Optimizing Proof-logging Systems (WOOPS) 2026</span>
+				<span class="pub-links">
+					<a href="pdf/Slides2026WOOPS.pdf">slides</a>
+				</span>
+			</li>
+			<li>
+				<span class="pub-title">Progress on VeriPB proof trimming</span>
+				<span class="pub-venue">International Workshop on Highlights in Organizing and Optimizing Proof-logging Systems (WOOPS) 2025</span>
+				<span class="pub-links">
+					<a href="https://jakobnordstrom.se/WHOOPS25/slides/ArthurGontier.pdf">slides</a>
+					<a href="https://youtu.be/LCgSG3CgfSI?si=UosExFefs8ZayO6G">talk</a>
+				</span>
+			</li>
+			<li>
+				<span class="pub-title">First results on VeriPB proof trimming</span>
+				<span class="pub-venue">International Workshop on Highlights in Organizing and Optimizing Proof-logging Systems (WOOPS) 2024</span>
+				<span class="pub-links">
+					<a href="https://jakobnordstrom.se/WHOOPS24/slides/ArthurGontier.pdf">slides</a>
+					<a href="https://youtu.be/nCRxQUi-xrs?si=h8WxoOQUjxHEijkP">talk</a>
+				</span>
+			</li>
+		</ol>
+	</section>
+
+	<!-- PhD -->
+	<section id="phd">
+		<h2>PhD thesis</h2>
+		<ol class="pubs">
+			<li>
+				<span class="pub-title">Cryptanalysis of symmetric ciphers using generic solvers <span style="font-weight:400;color:var(--ink-faint)">&mdash; Utilisation de solveurs g&eacute;n&eacute;riques pour la cryptanalyse de chiffrements sym&eacute;triques</span></span>
+				<span class="pub-authors"><span class="me">Arthur Gontier</span></span>
+				<span class="pub-venue">Th&egrave;se de doctorat, Universit&eacute; de Rennes, 2023</span>
+				<span class="pub-links">
+					<a href="https://ged.univ-rennes1.fr/nuxeo/site/esupversions/d53e58d8-c471-46ff-90b6-c5138ef141b2?inline">pdf</a>
+					<a href="pdf/Slides2023PhD.pdf">slides</a>
+					<a href="https://www.youtube.com/live/4HPEH43bKuc?si=TzZlYB9girkBYrjC&amp;t=4254">defence</a>
+				</span>
+			</li>
+		</ol>
+	</section>
+
+	<!-- Teaching -->
+	<section id="teaching">
+		<h2>Teaching</h2>
+		<table class="teaching">
+			<tr><td class="course">Graph theory</td><td>Universit&eacute; de Rennes 1, Bachelor 3</td><td class="meta">2020 &middot; 24 h</td></tr>
+			<tr><td class="course">Mixed integer linear programming</td><td>Universit&eacute; de Rennes 1, Master 1</td><td class="meta">2020 &middot; 12 h</td></tr>
+			<tr><td class="course">Functional programming</td><td>INSA Rennes, Master 1</td><td class="meta">2021 &middot; 18 h</td></tr>
+			<tr><td class="course">Computer science</td><td>Universit&eacute; de Rennes 1, Bachelor 1</td><td class="meta">2021&ndash;2023 &middot; 72 h</td></tr>
+		</table>
+	</section>
+
+	<!-- Contact -->
+	<section id="contact">
+		<h2>Contact</h2>
+		<div class="contact-grid">
+			<div>
+				<span class="label">Work</span>
+				<a href="mailto:arthur.gontier@glasgow.ac.uk">arthur.gontier@glasgow.ac.uk</a>
 			</div>
+			<div>
+				<span class="label">Personal</span>
+				<a href="mailto:arthur.pro.gontier@gmail.com">arthur.pro.gontier@gmail.com</a>
+			</div>
+			<div>
+				<span class="label">Find me</span>
+				Office G091, School of Computing Science,<br />
+				Sir Alwyn Williams Building, Glasgow
+			</div>
+		</div>
+	</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- Footer -->
+	<div id="footer">
+		<p class="quote">Music is loud Math and math is silent music &mdash; <i>E.Heriot</i></p>
+	</div>
 
-	</body>
+</div>
+
+<a href="#" id="totop" class="fas fa-chevron-up" aria-label="Back to top"></a>
+
+<script>
+(function () {
+	var body = document.body;
+
+	// Fade the sheet in on load.
+	window.addEventListener('load', function () {
+		setTimeout(function () { body.classList.remove('is-preload'); body.classList.add('is-ready'); }, 60);
+	});
+
+	var sections = Array.prototype.slice.call(document.querySelectorAll('section'));
+	var links = Array.prototype.slice.call(document.querySelectorAll('#nav a'));
+	var totop = document.getElementById('totop');
+
+	// Reveal sections as they scroll into view.
+	if ('IntersectionObserver' in window) {
+		var reveal = new IntersectionObserver(function (entries) {
+			entries.forEach(function (e) {
+				if (e.isIntersecting) { e.target.classList.add('revealed'); reveal.unobserve(e.target); }
+			});
+		}, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+		sections.forEach(function (s) { reveal.observe(s); });
+	} else {
+		body.classList.add('no-anim');
+	}
+
+	// Highlight the section currently being read.
+	function sync() {
+		var line = window.innerHeight * 0.28;
+		var current = sections[0];
+		sections.forEach(function (s) { if (s.getBoundingClientRect().top <= line) current = s; });
+		links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + current.id); });
+		totop.classList.toggle('show', window.scrollY > 400);
+	}
+
+	var ticking = false;
+	window.addEventListener('scroll', function () {
+		if (ticking) return;
+		ticking = true;
+		window.requestAnimationFrame(function () { sync(); ticking = false; });
+	}, { passive: true });
+	window.addEventListener('resize', sync);
+	sync();
+
+	totop.addEventListener('click', function (e) {
+		e.preventDefault();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	});
+})();
+</script>
+
+</body>
 </html>
