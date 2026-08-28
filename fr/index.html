@@ -1,31 +1,31 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="fr">
 <head>
 <title>Arthur Gontier</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Arthur Gontier - postdoctoral researcher, FATA section, University of Glasgow. Constraint solvers, proof logging, cryptanalysis." />
-<link rel="canonical" href="https://arthurgontierpro.github.io/" />
+<meta name="description" content="Arthur Gontier - chercheur postdoctoral, section FATA, université de Glasgow. Solveurs de contraintes, preuves vérifiables, cryptanalyse." />
+<link rel="canonical" href="https://arthurgontierpro.github.io/fr/" />
 <link rel="alternate" hreflang="en" href="https://arthurgontierpro.github.io/" />
 <link rel="alternate" hreflang="fr" href="https://arthurgontierpro.github.io/fr/" />
 <link rel="alternate" hreflang="x-default" href="https://arthurgontierpro.github.io/" />
 
 <meta property="og:type" content="profile" />
 <meta property="og:site_name" content="Arthur Gontier" />
-<meta property="og:url" content="https://arthurgontierpro.github.io/" />
+<meta property="og:url" content="https://arthurgontierpro.github.io/fr/" />
 <meta property="og:title" content="Arthur Gontier" />
-<meta property="og:description" content="Postdoctoral researcher, FATA section, University of Glasgow. Constraint solvers, proof logging, cryptanalysis." />
+<meta property="og:description" content="Chercheur postdoctoral, section FATA, université de Glasgow. Solveurs de contraintes, preuves vérifiables, cryptanalyse." />
 <meta property="og:image" content="https://arthurgontierpro.github.io/images/me.jpg" />
 <meta property="og:image:width" content="480" />
 <meta property="og:image:height" content="360" />
 <meta property="og:image:alt" content="Arthur Gontier" />
-<meta property="og:locale" content="en_GB" />
-<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:locale:alternate" content="en_GB" />
 <meta property="profile:first_name" content="Arthur" />
 <meta property="profile:last_name" content="Gontier" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Arthur Gontier" />
-<meta name="twitter:description" content="Postdoctoral researcher, FATA section, University of Glasgow. Constraint solvers, proof logging, cryptanalysis." />
+<meta name="twitter:description" content="Chercheur postdoctoral, section FATA, université de Glasgow. Solveurs de contraintes, preuves vérifiables, cryptanalyse." />
 <meta name="twitter:image" content="https://arthurgontierpro.github.io/images/me.jpg" />
 <meta name="twitter:image:alt" content="Arthur Gontier" />
 
@@ -41,20 +41,14 @@
 	window.__revealFailsafe = setTimeout(function () { h.className += ' reveal-all'; }, 3000);
 })(document);
 </script>
-<script>
-/* Before the French version had its own URL the language was carried in a query
-   string. Those links are still out there, so honour them. */
-if (/[?&]lang=fr\b/.test(location.search)) {
-	location.replace('fr/' + location.hash);
-}
-</script>
-<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+
+<link rel="stylesheet" href="../assets/css/fontawesome-all.min.css" />
 <style>
 
 /* ------------------------------------------------------------------ fonts */
 
-@font-face { font-family: 'mm'; src: url(assets/css/MadokaMusical.ttf) format('truetype'); font-display: swap; }
-@font-face { font-family: 'mr'; src: url(assets/css/runes.ttf) format('truetype'); font-display: swap; }
+@font-face { font-family: 'mm'; src: url(../assets/css/MadokaMusical.ttf) format('truetype'); font-display: swap; }
+@font-face { font-family: 'mr'; src: url(../assets/css/runes.ttf) format('truetype'); font-display: swap; }
 
 /* ------------------------------------------------------------------ base  */
 
@@ -79,7 +73,7 @@ body {
 	/* Painted immediately (average colour of bg.jpg) so the page is never
 	   blank while the photo downloads on a slow connection. */
 	background-color: #5d7591;
-	background-image: url("assets/css/images/overlay.png"), url("assets/css/images/bg.jpg");
+	background-image: url("../assets/css/images/overlay.png"), url("../assets/css/images/bg.jpg");
 	background-repeat: repeat, no-repeat;
 	background-size: auto, cover;
 	background-attachment: fixed;
@@ -93,12 +87,12 @@ body {
 
 /* Serve WebP (~135K vs ~198K) where the browser supports it. Declared as an
    override so browsers without image-set() keep the JPEG above. */
-@supports (background-image: image-set(url("assets/css/images/bg.webp") type("image/webp"))) {
+@supports (background-image: image-set(url("../assets/css/images/bg.webp") type("image/webp"))) {
 	body {
 		background-image:
-			url("assets/css/images/overlay.png"),
-			image-set(url("assets/css/images/bg.webp") type("image/webp"),
-			          url("assets/css/images/bg.jpg")  type("image/jpeg"));
+			url("../assets/css/images/overlay.png"),
+			image-set(url("../assets/css/images/bg.webp") type("image/webp"),
+			          url("../assets/css/images/bg.jpg")  type("image/jpeg"));
 	}
 }
 
@@ -107,25 +101,25 @@ body {
    a full-screen repaint on every scroll frame on mobile GPUs. */
 @media screen and (max-width: 980px) {
 	body {
-		background-image: url("assets/css/images/overlay.png"), url("assets/css/images/bg-small.jpg");
+		background-image: url("../assets/css/images/overlay.png"), url("../assets/css/images/bg-small.jpg");
 		background-attachment: scroll;
 	}
 }
 
-@supports (background-image: image-set(url("assets/css/images/bg.webp") type("image/webp"))) {
+@supports (background-image: image-set(url("../assets/css/images/bg.webp") type("image/webp"))) {
 	@media screen and (max-width: 980px) {
 		body {
 			background-image:
-				url("assets/css/images/overlay.png"),
-				image-set(url("assets/css/images/bg-small.webp") type("image/webp"),
-				          url("assets/css/images/bg-small.jpg")  type("image/jpeg"));
+				url("../assets/css/images/overlay.png"),
+				image-set(url("../assets/css/images/bg-small.webp") type("image/webp"),
+				          url("../assets/css/images/bg-small.jpg")  type("image/jpeg"));
 		}
 	}
 }
 
 /* Users who have asked their browser to save data get the flat colour only. */
 @media (prefers-reduced-data: reduce) {
-	body { background-image: url("assets/css/images/overlay.png"); }
+	body { background-image: url("../assets/css/images/overlay.png"); }
 }
 
 @media screen and (max-width: 736px) { body { font-size: 15.5px; } }
@@ -185,7 +179,7 @@ header.masthead .portrait:hover img { transform: scale(1.06); }
 
 header.masthead .portrait:after {
 	content: ''; position: absolute; inset: 0;
-	background: url("assets/css/images/overlay.png");
+	background: url("../assets/css/images/overlay.png");
 	opacity: 0.35; pointer-events: none;
 }
 
@@ -473,20 +467,20 @@ table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
 	<!-- Masthead -->
 	<header class="masthead">
 		<div class="portrait"><picture>
-			<source srcset="images/me.webp" type="image/webp" />
-			<img src="images/me.jpg" alt="Arthur Gontier" width="480" height="360" decoding="async" />
+			<source srcset="../images/me.webp" type="image/webp" />
+			<img src="../images/me.jpg" alt="Arthur Gontier" width="480" height="360" decoding="async" />
 		</picture></div>
 		<div class="identity">
 			<div class="namerow">
 				<h1>Arthur Gontier</h1>
-				<span id="lang"><a href="./" hreflang="en" class="active" aria-current="page">EN</a><a href="fr/" hreflang="fr">FR</a></span>
+				<span id="lang"><a href="../" hreflang="en">EN</a><a href="./" hreflang="fr" class="active" aria-current="page">FR</a></span>
 			</div>
-			<p class="role">Postdoctoral researcher &mdash; solvers that prove their reasoning</p>
+			<p class="role">Chercheur postdoctoral &mdash; des solveurs qui prouvent leur raisonnement</p>
 			<ul class="facts">
-				<li><span class="fas fa-university"></span><a href="https://www.gla.ac.uk/schools/computing/research/researchsections/fata-section/">FATA section</a>, School of Computing Science, University of Glasgow</li>
-				<li><span class="fas fa-map-marker-alt"></span>Office G091, Sir Alwyn Williams Building, Glasgow</li>
+				<li><span class="fas fa-university"></span><a href="https://www.gla.ac.uk/schools/computing/research/researchsections/fata-section/">&Eacute;quipe FATA</a>, School of Computing Science, universit&eacute; de Glasgow</li>
+				<li><span class="fas fa-map-marker-alt"></span>Bureau G091, Sir Alwyn Williams Building, Glasgow</li>
 				<li><span class="fas fa-envelope"></span><a href="mailto:arthur.gontier@glasgow.ac.uk">arthur.gontier@glasgow.ac.uk</a></li>
-				<li><span class="fas fa-file-alt"></span><a href="pdf/CV.pdf">Curriculum vitae</a> &middot; <a href="https://ged.univ-rennes1.fr/nuxeo/site/esupversions/d53e58d8-c471-46ff-90b6-c5138ef141b2?inline">PhD thesis</a></li>
+				<li><span class="fas fa-file-alt"></span><a href="../pdf/CV.pdf">Curriculum vit&aelig;</a> &middot; <a href="https://ged.univ-rennes1.fr/nuxeo/site/esupversions/d53e58d8-c471-46ff-90b6-c5138ef141b2?inline">th&egrave;se de doctorat</a></li>
 				<li class="idlinks">
 					<a href="https://scholar.google.com/citations?user=yz2kLeUAAAAJ&amp;hl=fr&amp;oi=ao" title="Google Scholar" aria-label="Google Scholar"><svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
 					<a href="https://dblp.org/pid/303/4357.html" title="DBLP" aria-label="DBLP"><svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path d="M3.075.002c-.096.013-.154.092-.094.31L4.97 7.73 3.1 8.6s-.56.26-.4.85l2.45 9.159s.16.59.72.33l6.169-2.869 1.3-.61s.52-.24.42-.79l-.01-.06-1.13-4.22-.658-2.45-.672-2.49v-.04s-.16-.59-.84-1L3.5.141s-.265-.16-.425-.139zM18.324 5.03a.724.724 0 0 0-.193.06l-5.602 2.6.862 3.2 1.09 4.08.01.06c.05.47-.411.79-.411.79l-1.88.87.5 1.89.04.1c.07.17.28.6.81.91l6.95 4.269s.68.41.52-.17l-1.981-7.4 1.861-.86s.56-.26.4-.85L18.85 5.42s-.116-.452-.526-.39z"/></svg></a>
@@ -498,47 +492,31 @@ table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
 
 	<!-- Nav -->
 	<nav id="nav">
-		<a href="#about">About</a>
-		<a href="#research">Research</a>
+		<a href="#about">Pr&eacute;sentation</a>
+		<a href="#research">Recherche</a>
 		<a href="#publications">Publications</a>
-		<a href="#talks">Talks</a>
-		<a href="#phd">PhD</a>
-		<a href="#teaching">Teaching</a>
+		<a href="#talks">Expos&eacute;s</a>
+		<a href="#phd">Th&egrave;se</a>
+		<a href="#teaching">Enseignement</a>
 		<a href="#contact">Contact</a>
 	</nav>
 
 	<!-- About -->
 	<section id="about">
-		<h2>About</h2>
-		<p>
-		Since January 2024 I am a postdoctoral researcher at the University of Glasgow, in the
-		<a href="https://www.gla.ac.uk/schools/computing/research/researchsections/fata-section/">FATA section</a>.
-		I work with <a href="https://ciaranm.github.io/">Ciaran McCreesh</a>,
-		<a href="https://matthewmcilree.com/">Matthew McIlree</a> and the
-		<a href="https://veripb.github.io/">VeriPB group</a> on proof producing constraint solvers.
-		</p>
-		<p>
-		Before that I was a PhD student in symmetric cryptanalysis with declarative languages. I used several kinds of solvers, constraint programming, linear programming and Boolean satisfiability, as well as dedicated algorithms, to find differential characteristics or mount cube attacks, for example.
-		I was working in the
-		<a href="https://team.inria.fr/capsule/">CAPSULE team</a> in Rennes, supervised by
-		<a href="https://people.irisa.fr/Stephanie.Delaune/">St&eacute;phanie Delaune</a>,
-		<a href="http://people.irisa.fr/Patrick.Derbez/">Patrick Derbez</a> and
-		<a href="https://cprudhom.github.io/">Charles Prud'homme</a>.
-		</p>
-		<p>
-		Earlier, I obtained a Master's degree in Optimisation and Operational Research in Nantes and Brussels and I did several research internships on multi-objective optimisation,
-		static program analysis and CP explanations.
-		</p>
+		<h2>Pr&eacute;sentation</h2>
+		<p>Depuis janvier 2024, je suis chercheur postdoctoral &agrave; l&rsquo;universit&eacute; de Glasgow, dans la <a href="https://www.gla.ac.uk/schools/computing/research/researchsections/fata-section/">section FATA</a>. Je travaille avec <a href="https://ciaranm.github.io/">Ciaran McCreesh</a>, <a href="https://matthewmcilree.com/">Matthew McIlree</a> et le <a href="https://veripb.github.io/">groupe VeriPB</a> sur des solveurs certifiants, c&rsquo;est-&agrave;-dire des solveurs d&rsquo;optimisation sous contraintes qui g&eacute;n&egrave;rent une preuve v&eacute;rifiable de leur raisonnement.</p>
+		<p>Auparavant, j&rsquo;ai effectu&eacute; ma th&egrave;se sur la cryptanalyse sym&eacute;trique &agrave; l&rsquo;aide de langages d&eacute;claratifs. J&rsquo;ai utilis&eacute; des solveurs de contraintes, de programmation lin&eacute;aire et de satisfiabilit&eacute; bool&eacute;enne, mais aussi des algorithmes d&eacute;di&eacute;s, pour trouver des caract&eacute;ristiques diff&eacute;rentielles ou monter des attaques par cube, par exemple. Je travaillais dans l&rsquo;&eacute;quipe <a href="https://team.inria.fr/capsule/">CAPSULE</a> &agrave; Rennes, encadr&eacute; par <a href="https://people.irisa.fr/Stephanie.Delaune/">St&eacute;phanie Delaune</a>, <a href="http://people.irisa.fr/Patrick.Derbez/">Patrick Derbez</a> et <a href="https://cprudhom.github.io/">Charles Prud&rsquo;homme</a>.</p>
+		<p>Avant cela, j&rsquo;ai obtenu le master Optimisation et recherche op&eacute;rationnelle &agrave; Nantes et &agrave; Bruxelles, et j&rsquo;ai effectu&eacute; plusieurs stages de recherche sur l&rsquo;optimisation multi-objectif, l&rsquo;analyse statique de programmes et les explications en programmation par contraintes.</p>
 	</section>
 
 	<!-- Research -->
 	<section id="research">
-		<h2>Research interests</h2>
+		<h2>Th&egrave;mes de recherche</h2>
 		<ul class="interests">
-			<li><b>Proof logging for constraint solvers.</b> Making solvers justify every inference they make, so that their answers can be checked independently. My current work is on trimming VeriPB proofs to make verification tractable, and to explain the critical reasoning of solvers.</li>
-			<li><b>Generic solvers for cryptanalysis.</b> Modelling cryptographic properties so that solvers can reason about them can lead to new discoveries, and if those solvers are certifying, we can derive security guarantees from their proofs.</li>
-			<li><b>Conflict analysis, explanations and proof logging.</b> To make explanations and proof logging easier to use in CP solvers, I am interested in generating explanations for global constraints from their decompositions, and in externalising the justifications of propagators.</li>
-			<li><b>Generic cryptanalysis tooling.</b> I contributed to <a href="https://gitlab.limos.fr/iia_lulibral/tagada">TAGADA</a>, a tool where anyone can model a block cipher and have differential cryptanalysis performed on it automatically. Such tools are valuable to automate and speed up cryptanalysis.</li>
+			<li><b>G&eacute;n&eacute;ration de preuves pour les solveurs d&rsquo;optimisation sous contraintes.</b> Faire en sorte qu&rsquo;un solveur justifie chacune de ses d&eacute;ductions, afin que ses r&eacute;ponses puissent &ecirc;tre v&eacute;rifi&eacute;es ind&eacute;pendamment. Je travaille actuellement sur la simplification des preuves VeriPB, pour rendre leur v&eacute;rification praticable, mais aussi pour expliquer les raisonnements critiques des solveurs.</li>
+			<li><b>Solveurs g&eacute;n&eacute;riques pour la cryptanalyse.</b> Mod&eacute;liser des propri&eacute;t&eacute;s cryptographiques pour les r&eacute;soudre avec des solveurs peut mener &agrave; de nouvelles d&eacute;couvertes. De plus, si ces solveurs sont certifiants, on peut en d&eacute;duire des preuves de s&eacute;curit&eacute;.</li>
+			<li><b>Analyse de conflits, explications et g&eacute;n&eacute;ration de preuves.</b> D&eacute;mocratiser l&rsquo;utilisation des explications de conflits et des justifications de propagation, en g&eacute;n&eacute;rant des explications pour les contraintes globales &agrave; partir de leurs d&eacute;compositions et en externalisant les justifications des propagateurs.</li>
+			<li><b>Outils g&eacute;n&eacute;riques de cryptanalyse.</b> J&rsquo;ai contribu&eacute; &agrave; <a href="https://gitlab.limos.fr/iia_lulibral/tagada">TAGADA</a>, un outil o&ugrave; chacun peut mod&eacute;liser un chiffrement par blocs et en obtenir automatiquement la cryptanalyse diff&eacute;rentielle. Ce genre d&rsquo;outil est pr&eacute;cieux pour automatiser et acc&eacute;l&eacute;rer la cryptanalyse.</li>
 		</ul>
 	</section>
 
@@ -546,13 +524,13 @@ table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
 	<section id="publications">
 		<h2>Publications</h2>
 
-		<h3>International peer-reviewed conferences</h3>
+		<h3>Conf&eacute;rences internationales &agrave; comit&eacute; de lecture</h3>
 		<ol class="pubs">
 
 			<li>
 				<span class="pub-title">Trimming pseudo-Boolean proofs</span>
 				<span class="pub-authors">Berhan Oumer Adame, Bart Bogaerts, Benjamin Bog&oslash;, Simon Dold, <span class="me">Arthur Gontier</span>, Wietze Koops, Ciaran McCreesh, Matthew McIlree, Jakob Nordstr&ouml;m, Andy Oertel, Adrian Rebola&#8209;Pardo, Mark Turnbull</span>
-				<span class="pub-venue">Formal Methods in Computer-Aided Design (FMCAD 2026), Graz, Austria, 14&ndash;18 September 2026 &mdash; accepted for publication</span>
+				<span class="pub-venue">Formal Methods in Computer-Aided Design (FMCAD 2026), Graz, Autriche, 14&ndash;18 septembre 2026 &mdash; accept&eacute; pour publication</span>
 				<span class="pub-links">
 					<a href="https://jakobnordstrom.se/docs/publications/TrimmingPseudo-BooleanProofs_FMCAD.pdf">pdf</a>
 					<a href="https://zenodo.org/records/20136181">code</a>
@@ -575,7 +553,7 @@ table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
 				<span class="pub-venue">International Conference on Cryptology in India (INDOCRYPT 2023), pages 247&ndash;268, Springer, 2023</span>
 				<span class="pub-links">
 					<a href="https://eprint.iacr.org/2023/1831.pdf">pdf</a>
-					<a href="pdf/Slides2023TAGADA.pdf">slides</a>
+					<a href="../pdf/Slides2023TAGADA.pdf">slides</a>
 					<a href="https://gitlab.com/tagada-framework/tagada">code</a>
 				</span>
 			</li>
@@ -586,8 +564,8 @@ table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
 				<span class="pub-venue">Progress in Cryptology &ndash; INDOCRYPT 2022, LNCS 13774, pages 103&ndash;124, Springer, 2022</span>
 				<span class="pub-links">
 					<a href="https://eprint.iacr.org/2023/023.pdf">pdf</a>
-					<a href="pdf/Slides2022Feistel.pdf">slides</a>
-					<a href="https://www.youtube.com/live/6canW5at3e4?feature=share&amp;t=1534">talk</a>
+					<a href="../pdf/Slides2022Feistel.pdf">slides</a>
+					<a href="https://www.youtube.com/live/6canW5at3e4?feature=share&amp;t=1534">exposé</a>
 					<a href="https://gitlab.inria.fr/agontier/ANewAlgoForGFN">code</a>
 				</span>
 			</li>
@@ -598,34 +576,34 @@ table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
 				<span class="pub-venue">Selected Areas in Cryptography &ndash; SAC 2021, LNCS 13203, pages 266&ndash;285, Springer, 2021</span>
 				<span class="pub-links">
 					<a href="https://eprint.iacr.org/2021/1191.pdf">pdf</a>
-					<a href="pdf/Slides2021Trivium.pdf">slides</a>
-					<a href="https://youtu.be/UV7X9zJOJsw">talk</a>
+					<a href="../pdf/Slides2021Trivium.pdf">slides</a>
+					<a href="https://youtu.be/UV7X9zJOJsw">exposé</a>
 					<a href="https://gitlab.inria.fr/agontier/trivium-superpoly">code</a>
 				</span>
 			</li>
 
 		</ol>
 
-		<h3>Workshops and national conferences</h3>
+		<h3>Workshops et congr&egrave;s nationaux</h3>
 		<ol class="pubs">
 
 			<li>
 				<span class="pub-title">Diffusion totale dans le sch&eacute;ma de Feistel g&eacute;n&eacute;ralis&eacute;</span>
 				<span class="pub-authors">St&eacute;phanie Delaune, Patrick Derbez, <span class="me">Arthur Gontier</span>, Charles Prud'homme</span>
-				<span class="pub-venue">ROADEF 2022, 23<sup>e</sup> congr&egrave;s annuel de la Soci&eacute;t&eacute; Fran&ccedil;aise de Recherche Op&eacute;rationnelle et d'Aide &agrave; la D&eacute;cision, Villeurbanne &ndash; Lyon, France, February 2022</span>
+				<span class="pub-venue">ROADEF 2022, 23<sup>e</sup> congr&egrave;s annuel de la Soci&eacute;t&eacute; fran&ccedil;aise de recherche op&eacute;rationnelle et d&rsquo;aide &agrave; la d&eacute;cision, Villeurbanne &ndash; Lyon, France, f&eacute;vrier 2022</span>
 				<span class="pub-links">
 					<a href="https://hal.science/hal-03595277v1/document">pdf</a>
-					<a href="pdf/Slides2022ROADEF.pdf">slides</a>
+					<a href="../pdf/Slides2022ROADEF.pdf">slides</a>
 				</span>
 			</li>
 
 			<li>
 				<span class="pub-title">Conflict analysis in CP solving: explanation generation from constraint decomposition</span>
 				<span class="pub-authors"><span class="me">Arthur Gontier</span>, Charlotte Truchet, Charles Prud'homme</span>
-				<span class="pub-venue">CP 2020 workshop &ldquo;From Constraint Programming to Trustworthy AI&rdquo;, 26th International Conference on Principles and Practice of Constraint Programming, Louvain-la-Neuve, Belgium, September 2020</span>
+				<span class="pub-venue">Workshop &laquo;&nbsp;From Constraint Programming to Trustworthy AI&nbsp;&raquo; de CP 2020, 26th International Conference on Principles and Practice of Constraint Programming, Louvain-la-Neuve, Belgique, septembre 2020</span>
 				<span class="pub-links">
 					<a href="https://hal.science/hal-03179630v1/document">pdf</a>
-					<a href="pdf/Slides2023ROADEF.pdf">slides</a>
+					<a href="../pdf/Slides2023ROADEF.pdf">slides</a>
 					<a href="https://github.com/ArthurGontierPro/Explaining-Global-Constraints-from-Decompositions">code</a>
 				</span>
 			</li>
@@ -635,13 +613,13 @@ table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
 
 	<!-- Talks -->
 	<section id="talks">
-		<h2>Invited talks</h2>
+		<h2>Expos&eacute;s invit&eacute;s</h2>
 		<ol class="pubs">
 			<li>
 				<span class="pub-title">Trimming pseudo-Boolean proofs</span>
 				<span class="pub-venue">International Workshop on Highlights in Organizing and Optimizing Proof-logging Systems (WOOPS) 2026</span>
 				<span class="pub-links">
-					<a href="pdf/Slides2026WOOPS.pdf">slides</a>
+					<a href="../pdf/Slides2026WOOPS.pdf">slides</a>
 				</span>
 			</li>
 			<li>
@@ -649,7 +627,7 @@ table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
 				<span class="pub-venue">International Workshop on Highlights in Organizing and Optimizing Proof-logging Systems (WOOPS) 2025</span>
 				<span class="pub-links">
 					<a href="https://jakobnordstrom.se/WHOOPS25/slides/ArthurGontier.pdf">slides</a>
-					<a href="https://youtu.be/LCgSG3CgfSI?si=UosExFefs8ZayO6G">talk</a>
+					<a href="https://youtu.be/LCgSG3CgfSI?si=UosExFefs8ZayO6G">exposé</a>
 				</span>
 			</li>
 			<li>
@@ -657,7 +635,7 @@ table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
 				<span class="pub-venue">International Workshop on Highlights in Organizing and Optimizing Proof-logging Systems (WOOPS) 2024</span>
 				<span class="pub-links">
 					<a href="https://jakobnordstrom.se/WHOOPS24/slides/ArthurGontier.pdf">slides</a>
-					<a href="https://youtu.be/nCRxQUi-xrs?si=h8WxoOQUjxHEijkP">talk</a>
+					<a href="https://youtu.be/nCRxQUi-xrs?si=h8WxoOQUjxHEijkP">exposé</a>
 				</span>
 			</li>
 		</ol>
@@ -665,16 +643,16 @@ table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
 
 	<!-- PhD -->
 	<section id="phd">
-		<h2>PhD thesis</h2>
+		<h2>Th&egrave;se de doctorat</h2>
 		<ol class="pubs">
 			<li>
-				<span class="pub-title">Cryptanalysis of symmetric ciphers using generic solvers <span style="font-weight:400;color:var(--ink-faint)">&mdash; Utilisation de solveurs g&eacute;n&eacute;riques pour la cryptanalyse de chiffrements sym&eacute;triques</span></span>
+				<span class="pub-title">Utilisation de solveurs g&eacute;n&eacute;riques pour la cryptanalyse de chiffrements sym&eacute;triques</span>
 				<span class="pub-authors"><span class="me">Arthur Gontier</span></span>
-				<span class="pub-venue">Th&egrave;se de doctorat, Universit&eacute; de Rennes, 2023</span>
+				<span class="pub-venue">Th&egrave;se de doctorat, universit&eacute; de Rennes, 2023</span>
 				<span class="pub-links">
 					<a href="https://ged.univ-rennes1.fr/nuxeo/site/esupversions/d53e58d8-c471-46ff-90b6-c5138ef141b2?inline">pdf</a>
-					<a href="pdf/Slides2023PhD.pdf">slides</a>
-					<a href="https://www.youtube.com/live/4HPEH43bKuc?si=TzZlYB9girkBYrjC&amp;t=4254">defence</a>
+					<a href="../pdf/Slides2023PhD.pdf">slides</a>
+					<a href="https://www.youtube.com/live/4HPEH43bKuc?si=TzZlYB9girkBYrjC&amp;t=4254">soutenance</a>
 				</span>
 			</li>
 		</ol>
@@ -682,12 +660,12 @@ table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
 
 	<!-- Teaching -->
 	<section id="teaching">
-		<h2>Teaching</h2>
+		<h2>Enseignement</h2>
 		<table class="teaching">
-			<tr><td class="course">Graph theory</td><td>Universit&eacute; de Rennes 1, Bachelor 3</td><td class="meta">2020 &middot; 24 h</td></tr>
-			<tr><td class="course">Mixed integer linear programming</td><td>Universit&eacute; de Rennes 1, Master 1</td><td class="meta">2020 &middot; 12 h</td></tr>
-			<tr><td class="course">Functional programming</td><td>INSA Rennes, Master 1</td><td class="meta">2021 &middot; 18 h</td></tr>
-			<tr><td class="course">Computer science</td><td>Universit&eacute; de Rennes 1, Bachelor 1</td><td class="meta">2021&ndash;2023 &middot; 72 h</td></tr>
+			<tr><td class="course">Th&eacute;orie des graphes</td><td>Universit&eacute; de Rennes 1, licence 3</td><td class="meta">2020 &middot; 24 h</td></tr>
+			<tr><td class="course">Programmation lin&eacute;aire en nombres entiers</td><td>Universit&eacute; de Rennes 1, master 1</td><td class="meta">2020 &middot; 12 h</td></tr>
+			<tr><td class="course">Programmation fonctionnelle</td><td>INSA Rennes, master 1</td><td class="meta">2021 &middot; 18 h</td></tr>
+			<tr><td class="course">Informatique</td><td>Universit&eacute; de Rennes 1, licence 1</td><td class="meta">2021&ndash;2023 &middot; 72 h</td></tr>
 		</table>
 	</section>
 
@@ -696,27 +674,26 @@ table.teaching td.meta { color: var(--ink-faint); white-space: nowrap; }
 		<h2>Contact</h2>
 		<div class="contact-grid">
 			<div>
-				<span class="label">Work</span>
+				<span class="label">Professionnel</span>
 				<a href="mailto:arthur.gontier@glasgow.ac.uk">arthur.gontier@glasgow.ac.uk</a>
 			</div>
 			<div>
-				<span class="label">Personal</span>
+				<span class="label">Personnel</span>
 				<a href="mailto:arthur.pro.gontier@gmail.com">arthur.pro.gontier@gmail.com</a>
 			</div>
 			<div>
-				<span class="label">Find me</span>
-				<span>Office G091, School of Computing Science,<br />
-				Sir Alwyn Williams Building, Glasgow</span>
+				<span class="label">O&ugrave; me trouver</span>
+				<span>Bureau G091, School of Computing Science,<br />Sir Alwyn Williams Building, Glasgow</span>
 			</div>
 		</div>
 	</section>
 </div>
 	<!-- Footer -->
 	<div id="footer">
-		<p class="quote">Music is a sonorous mathematics, mathematics a silent music<br /><i>&Eacute;. Herriot</i></p>
+		<p class="quote">La musike est une mathematike sonore, la mathematike une musike silencieuse<br /><i>&Eacute;. Herriot</i></p>
 	</div>
 
-<a href="#" id="totop" class="fas fa-chevron-up" aria-label="Back to top"></a>
+<a href="#" id="totop" class="fas fa-chevron-up" aria-label="Haut de page"></a>
 
 <script>
 (function () {
